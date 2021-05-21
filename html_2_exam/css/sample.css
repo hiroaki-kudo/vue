@@ -8,6 +8,7 @@ body {
 .main-header {
   padding-bottom: 15%;
   width: 100%;
+  height: 250px;
   background-size: cover;
   background-image: url("../images/header.jpg");
   background-attachment: fixed;
@@ -51,14 +52,12 @@ header ul:after {
 }
 /* ここまでがheader部分の実装 */
 .main-header img {
+  padding-top: 160px;
   width: 13%;
+  position: relative;
 }
 
 .header-img {
-
-}
-
-.about {
 
 }
 
