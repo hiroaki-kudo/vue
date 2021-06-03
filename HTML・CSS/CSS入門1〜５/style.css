@@ -1,0 +1,16 @@
+/* 背景色の設定 */
+body {
+  background-color: #00aeef;
+}
+h2 {
+  color: #f9f9f9;
+  font-size: 16px;
+}
+/* 段落1のスタイルを定義 */
+#parag1{
+  font-size: large;
+}
+/* 段落2のスタイルを定義 */
+#parag2{
+  background-color: white;
+}

@@ -91,11 +91,9 @@ $(document).ready(function () {
   });
   // 「最終ジャッジ」(id="btn-declaration")ボタンが押された際、「function judgement()」の処理を実行させる。
   $('#btn-declaration').click(function(){
+    $("#alert-indicate").remove();
     $("#declaration").text(judgement());
   });
   // ２回目以降に「最終ジャッジ」ボタンを押した際は、それまでに表示していたジャッジのHTML要素を削除して、新たなジャッジのHTML要素を追加する。
   // ヒント：removeメソッドについて調べてみましょう。
-  $('#btn-declaration').click(function () {
-  
-  });
 });

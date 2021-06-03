@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM操作入門</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="" id="name"/>
+      <input  value="追加" id="btn"/>
+    </form>
+    <h3>TODOリスト</h3>
+    <ul id="lists"></ul>
+    <button type="button" id="deleteButton">削除する</button>
+    <script>
+      const lists = document.getElementById('lists');
+      const target = document.getElementById('btn');
+      target.addEventListener('click', function() {
+        const form = document.getElementById('name');
+        const list = document.createElement('li');
+        list.textContent = form.value;
+        list.addEventListener('click', function(e) {
+          const doneList = e.target;
+          doneList.style.textDecoration = 'line-through'; <!-- 追加 -->
+          doneList.style.color = 'gray'; <!-- 追加 -->
+          doneList.style.fontStyle = 'italic'; <!-- 追加 -->
+        },false);
+        lists.appendChild(list);
+        form.value = "";
+      },false);
+
+      const deleteButton = document.getElementById('deleteButton');
+      deleteButton.addEventListener('click', function() {
+        while (lists.firstChild) {
+          lists.removeChild(lists.firstChild);
+        }
+      },false);
+    </script>
+  </body>
+</html>
