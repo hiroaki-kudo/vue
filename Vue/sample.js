@@ -18,7 +18,7 @@ new Vue({
   methods: {
     addStudent: function() {
       this.students.push({
-          id: this.defaultLastId++,
+          id: this.defaultLastId += 1,
           name: this.name,
           course: this.course,
           acceptancePeriod: this.acceptancePeriod
